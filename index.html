@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.
+    0">
+    <link rel="stylesheet" href="src/style/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>    
+    <title>Show Su</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <i id="nav_logo"><img src="src/image/showsu_logo.png" alt=""></i>
+            <ul id="nav_lista">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre">Sobre nós</a>
+                </li>
+            </ul>
+
+            <button class="btn-default" ><a  href="https://wa.me/5511977434288" style="color: rgb(0, 0, 0)" style="text-decoration: none;">peça aqui</a></button>
+
+            <button id="mobile_btn">    
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_lista">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre">Sobre Nós</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">
+                peça aqui
+            </button>
+
+        </div>
+    </header> <!--Navbar-->
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="titulo">O sabor de outro <span>mundo!!!</span></h1>
+
+                <p class="descricao">Praticidade e comida caseira no seu dia, feita com muito amor e muito carinho.</p>
+
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-default" id="ver_cardapio">
+                        Ver Cardápio
+                    </a>
+
+                    <a href="tel: +11 977434288" id="tel_button">
+                        <button class="btn-default"><i class="fa-solid fa-phone"> (11) 97743-4288 </i></button>
+                    </a>
+
+                    <a href="tel: +11 984882836" id="tel_button">
+                        <button class="btn-default"><i class="fa-solid fa-phone"> (11) 98488-2836 </i></button>
+                    </a>
+                </div>
+                <div class="social-media-buttons">
+                    <a href="https://wa.me/5511977434288">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/showsudelicias/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div id="banner">
+                <img src="src/image/page.png" alt="">
+            </div>
+
+        </section> <!--Home-->
+
+        <section id="menu">
+            <h2 class="section-titulo">Cardápio</h2>
+            <h3 class="section-subtitulo">Salgados</h3>
+
+            <div id="pratos">
+                <div class="prato">
+                    <div class="prato-coracao">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/cardapio/salgados.jpg" class="prato-image" alt="">
+
+                    <h3 class="titulo-prato">
+                        Salgados.
+                    </h3>
+
+                    <span class="descricao-titulo">
+                        Coxinha, bolinho de carne, de queijo.
+                        risoles Calabresa com queijo, brocolis com queijo,
+                        salsichinha, croquete de carne,  kibe.
+                    </span>
+
+                </div> <!--PRATO 1-->
+
+                <div class="prato">
+                    <div class="prato-coracao">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/cardapio/ceia natal-ano-novo.jpg" class="prato-image" alt="">
+
+                    <h3 class="titulo-prato">
+                        Ceia.
+                    </h3>
+
+                    <span class="descricao-titulo">
+                        Preparamos sua Ceia de Natal e Ano Novo, incluindo até sobremesas....
+                        Faça sua cotação conosco.
+                    </span>
+
+
+                </div> <!--PRATO 2-->
+
+                <div class="prato">
+                    <div class="prato-coracao">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/cardapio/marmitas .jpg" class="prato-image" alt="">
+
+                    <h3 class="titulo-prato">
+                        Marmitinhas.
+                    </h3>
+
+                    <span class="descricao-titulo">
+                        Venha viver uma vida mais leve com muito mais sabor e praticidade no seu dia a dia.
+                        Fazemos sob encomendo. Solicite nosso cardápio.
+                    </span>
+
+
+                </div> <!--PRATO 3-->   
+            </div>
+            <div id="pratos">
+                <div class="prato">
+                    <div class="prato-coracao">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/cardapio/sanduiche natural.jpg" class="prato-image" alt="">
+
+                    <h3 class="titulo-prato">
+                        sanduiche natural.
+                    </h3>
+
+                    <span class="descricao-titulo">
+                        Sabores frango ou atum.
+                    </span>
+
+
+                </div> <!--PRATO 4-->
+
+                <div class="prato">
+                    <div class="prato-coracao">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/cardapio/panquecas.jpg" class="prato-image" alt="">
+
+                    <h3 class="titulo-prato">
+                        Panquecas
+                    </h3>
+
+                    <span class="descricao-titulo">
+                        Deliciosa panquecas nos sabores:
+                        Frango com requeijão cremoso, carne, pizza, brocolis com queijo, escarola com queijo, palmito.
+                    </span>
+
+
+                </div> <!--PRATO 5-->
+
+                <div class="prato">
+                    <div class="prato-coracao">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+
+
+                    <img src="src/cardapio/torta.jpg" class="prato-image" alt="">
+
+                    <h3 class="titulo-prato">
+                        Torta.
+                    </h3>
+
+                    <span class="descricao-titulo">
+                        Essa divina massa com sabores maravilhosos:
+                        Frango com requeijão cremoso, carne, brocolis com queijo, queijo e presunto e atum.
+                    </span>
+
+
+                </div> <!--PRATO 6-->
+            </div>
+
+            <h3 class="section-subtitulo">Doces</h3>
+            <div id="pratos">
+                <div class="prato">
+                    <div class="prato-coracao">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/cardapio/bolo aniversario.jpg" class="prato-image" alt="">
+
+                    <h3 class="titulo-prato">
+                        Bolo de aniversario.
+                    </h3>
+
+                    <span class="descricao-titulo">
+                        Vários sabores a escolher para se deliciar na sua data comemorativa (reuniões ou aniversários).
+                    </span>
+
+                </div> <!--PRATO 7-->
+
+                <div class="prato">
+                    <div class="prato-coracao">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/cardapio/bolo vulcão.jpg" class="prato-image" alt="">
+
+                    <h3 class="titulo-prato">
+                        Bolo Vulcão.
+                    </h3>
+
+                    <span class="descricao-titulo">
+                        Deliciosa massa com uma intensa cobertura a escolher: brigadeiro, brigadeiro branco, ninho, prestigio, mousse de limão, mousse de maracujá ou creme com abacaxi.
+                    </span>
+
+
+                </div> <!--PRATO 8-->
+
+                <div class="prato">
+                    <div class="prato-coracao">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/cardapio/bolo picina.jpg" class="prato-image" alt="">
+
+                    <h3 class="titulo-prato">
+                        Bolo piscininha.
+                    </h3>
+
+                    <span class="descricao-titulo">
+                        Venha provar e mergulhar nessa delícia.
+                        Sabores: brigadeiro, brigadeiro branco, ninho, mousse limão, mousse maracujá, prestigio.
+                    </span>
+
+
+                </div> <!--PRATO 9-->
+            </div>
+
+            <h3 class="section-subtitulo">Kits</h3>
+                <div id="pratos">
+                    <div class="prato">
+                        <div class="prato-coracao">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+    
+                        <img src="src/cardapio/mini kit festa.jpg" class="prato-image" alt="">
+    
+                        <h3 class="titulo-prato">
+                            Kit casal.
+                        </h3>
+    
+                        <span class="descricao-titulo">
+                            Delícias feitas exclusivamente para seu amor: bolo coração, torta, brigadeiros, refri ou suco.
+                        </span>
+    
+                       
+                    </div> <!--PRATO 10-->
+    
+                    <div class="prato">
+                        <div class="prato-coracao">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+    
+                        <img src="src/cardapio/kit festa.jpg" class="prato-image" alt="">
+    
+                        <h3 class="titulo-prato">
+                            Festa na caixa.
+                        </h3>
+    
+                        <span class="descricao-titulo">
+                            Uma deliciosa caixa cheia de gordices e delícias.
+                        </span>
+    
+                       
+                    </div> <!--PRATO 11-->
+    
+                    <div class="prato">
+                        <div class="prato-coracao">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+    
+                        <img src="src/cardapio/kit festa2.jpg" class="prato-image" alt="">
+    
+                        <h3 class="titulo-prato">
+                            Kit festa.
+                        </h3>
+    
+                        <span class="descricao-titulo">
+                            Bolo decorado, salgadinhos e docinhos.
+                        </span>
+    
+                       
+                    </div> <!--PRATO 12-->
+            </div>
+        </section> <!--Menu-->
+
+        <section id="sobre">
+            <img src="src/image/chefes.png" alt="" id="chef"></img>
+
+            <div id="txt_sobre">
+                <h2 class="section-titulo">Sobre nós!</h2>
+                <h3 class="section-subtitulo ">Somos duas irmãs que com muito carinho amam cozinhar e fazem desta tarefa a arte de encantar o paladar de seus clientes.... O segredo??  É Estar cozinhando da mesma forma q fazem para a família tb para seus clientes.
+                    Venha experimentar as delícias das irmãs Su . ❤️💛</h3>
+            </div>
+        </section><!--Sobre-->
+    </main>
+
+    <footer>
+        <img src="src/image/wave.svg" alt="">
+
+        <div id="footer_itens">
+            <span id="copyringht">
+                &copy 2024 Murilo Enzo
+            </span>
+
+             <div class="social-media-buttons">
+                <a href="https://wa.me/5511977434288">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="https://www.instagram.com/showsudelicias/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </footer>
+    <script src="src/javascript/script.js"></script>
+</body>
+
+</html>

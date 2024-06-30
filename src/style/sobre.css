@@ -1,0 +1,47 @@
+#sobre {
+    min-width: calc(100vh - 91px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+#chef {
+    width: 500px;           
+    height: auto;
+}
+
+ .section-titulo, 
+ .section-subtitulo {
+    display: flex;
+}
+
+#sobre .section-subtitulo {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1152px) {
+    #sobre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #txt_sobre{
+        margin-right: 45%;
+        text-align: center;
+    }
+
+    #chef {
+        width: 350px;
+        margin-right: 43%;
+        align-items: center;
+    }
+
+    .section-titulo .section-subtitulo{
+        display: flex;
+        align-items: center; 
+        margin-right: 50%;
+        
+    }
+}
+
