@@ -16,12 +16,6 @@
     text-align: center;
 }
 
-#pratos .btn-default {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
 .prato {
     display: flex;
     flex-direction: column;

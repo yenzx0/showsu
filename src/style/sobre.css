@@ -1,5 +1,4 @@
 #sobre {
-    min-width: calc(100vh - 91px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,18 +22,15 @@
 @media screen and (max-width: 1152px) {
     #sobre {
         flex-direction: column;
-        align-items: center;
     }
 
-    #txt_sobre{
-        margin-right: 45%;
+    #txt_sobre h3{
         text-align: center;
     }
 
     #chef {
         width: 350px;
-        margin-right: 43%;
-        align-items: center;
+        flex-direction: column;
     }
 
     .section-titulo .section-subtitulo{
