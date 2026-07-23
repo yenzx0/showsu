@@ -1,6 +1,6 @@
 <script setup>
-import { ArrowDown, AtSign, MessageCircle, Phone } from '@lucide/vue'
-import { contact, whatsappUrl } from '../data/site'
+import { ArrowDown, AtSign, Phone } from '@lucide/vue'
+import { contact } from '../data/site'
 </script>
 
 <template>
@@ -18,15 +18,6 @@ import { contact, whatsappUrl } from '../data/site'
           <a class="button button-primary" href="#cardapio">
             Ver cardápio
             <ArrowDown :size="18" aria-hidden="true" />
-          </a>
-          <a
-            class="button button-secondary"
-            :href="whatsappUrl('Olá! Vim pelo site e gostaria de conhecer o cardápio da ShowSu.')"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MessageCircle :size="18" aria-hidden="true" />
-            Chamar no WhatsApp
           </a>
         </div>
 

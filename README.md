@@ -19,9 +19,23 @@ npm run build
 
 Os arquivos prontos serão criados na pasta `dist`.
 
+## Painel local
+
+No rodapé do site, clique em **Painel local** para abrir o gerenciador do catálogo.
+Nele é possível:
+
+- criar e excluir categorias;
+- adicionar produtos e fotos;
+- editar, ocultar ou excluir produtos;
+- exportar e importar um backup completo do catálogo.
+
+Os cadastros ficam armazenados somente no navegador do computador usado. Para levar
+os dados a outro computador ou proteger o catálogo contra limpeza do navegador,
+use **Exportar backup** e guarde o arquivo `.json`.
+
 ## Onde editar
 
-- `src/data/products.js`: produtos, categorias, descrições e imagens.
+- `src/data/products.js`: catálogo original usado na primeira abertura ou restauração.
 - `src/data/site.js`: telefones, WhatsApp, Instagram e navegação.
 - `src/components`: cada parte visual do site.
 - `src/assets/styles/global.css`: paleta, tipografia e responsividade.
