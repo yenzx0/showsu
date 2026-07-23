@@ -1,8 +1,8 @@
 export const categories = [
-  { id: 'todos', label: 'Todos' },
   { id: 'salgados', label: 'Salgados e refeições' },
   { id: 'doces', label: 'Doces' },
   { id: 'kits', label: 'Kits' },
+  { id: 'marmitas-fit', label: 'Marmitas Fit' },
 ]
 
 export const products = [
@@ -29,7 +29,7 @@ export const products = [
   {
     id: 3,
     name: 'Marmitinhas',
-    category: 'salgados',
+    category: 'marmitas-fit',
     description:
       'Mais sabor, leveza e praticidade no seu dia a dia. Produção sob encomenda — solicite nosso cardápio.',
     image: '/images/cardapio/marmitinhas.jpg',

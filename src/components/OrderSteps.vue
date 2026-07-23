@@ -1,6 +1,5 @@
 <script setup>
-import { CalendarCheck, MessageCircle, PartyPopper } from '@lucide/vue'
-import { whatsappUrl } from '../data/site'
+import { ArrowDown, CalendarCheck, MessageCircle, PartyPopper } from '@lucide/vue'
 
 const steps = [
   {
@@ -32,13 +31,9 @@ const steps = [
           <p class="eyebrow eyebrow-light">Simples e pertinho</p>
           <h2>Seu pedido em três passos</h2>
         </div>
-        <a
-          class="button button-on-dark"
-          :href="whatsappUrl('Olá! Gostaria de fazer uma encomenda na ShowSu Delícias.')"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Começar pedido
+        <a class="button button-on-dark" href="#cardapio">
+          Montar meu pedido
+          <ArrowDown :size="18" aria-hidden="true" />
         </a>
       </div>
 

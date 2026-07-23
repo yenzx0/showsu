@@ -1,19 +1,22 @@
 <script setup>
-import { ArrowUpRight } from '@lucide/vue'
-import { whatsappUrl } from '../data/site'
+import { Check, Plus } from '@lucide/vue'
 
 const props = defineProps({
   product: {
     type: Object,
     required: true,
   },
+  selected: {
+    type: Boolean,
+    default: false,
+  },
 })
 
-const orderMessage = `Olá! Vi o produto “${props.product.name}” no site da ShowSu e gostaria de saber mais para fazer um pedido.`
+defineEmits(['toggle'])
 </script>
 
 <template>
-  <article class="product-card">
+  <article class="product-card" :class="{ selected }">
     <div class="product-image-wrap">
       <img
         class="product-image"
@@ -30,16 +33,18 @@ const orderMessage = `Olá! Vi o produto “${props.product.name}” no site da 
     <div class="product-content">
       <h3>{{ product.name }}</h3>
       <p>{{ product.description }}</p>
-      <a
+      <button
+        type="button"
         class="product-link"
-        :href="whatsappUrl(orderMessage)"
-        target="_blank"
-        rel="noopener noreferrer"
-        :aria-label="`Pedir ${product.name} pelo WhatsApp`"
+        :class="{ selected }"
+        :aria-pressed="selected"
+        :aria-label="selected ? `Remover ${product.name} da lista` : `Adicionar ${product.name} à lista`"
+        @click="$emit('toggle', product.id)"
       >
-        Quero pedir
-        <ArrowUpRight :size="18" aria-hidden="true" />
-      </a>
+        <Check v-if="selected" :size="18" aria-hidden="true" />
+        <Plus v-else :size="18" aria-hidden="true" />
+        {{ selected ? 'Na sua lista' : 'Adicionar à lista' }}
+      </button>
     </div>
   </article>
 </template>
