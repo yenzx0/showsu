@@ -1,8 +1,6 @@
 <script setup>
 import { AtSign, MessageCircle, Phone, Settings } from '@lucide/vue'
 import { contact, navItems, whatsappUrl } from '../data/site'
-
-defineEmits(['open-admin'])
 </script>
 
 <template>
@@ -53,10 +51,10 @@ defineEmits(['open-admin'])
       <span>© {{ new Date().getFullYear() }} ShowSu Delícias</span>
       <div class="footer-bottom-actions">
         <span>Site por Murilo Enzo</span>
-        <button type="button" class="footer-admin-button" @click="$emit('open-admin')">
+        <RouterLink class="footer-admin-button" to="/admin">
           <Settings :size="14" aria-hidden="true" />
-          Painel local
-        </button>
+          Área administrativa
+        </RouterLink>
       </div>
     </div>
   </footer>

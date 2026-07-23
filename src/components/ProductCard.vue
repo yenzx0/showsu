@@ -1,5 +1,8 @@
 <script setup>
 import { Check, Plus } from '@lucide/vue'
+import { motion, useReducedMotion } from 'motion-v'
+
+const prefersReducedMotion = useReducedMotion()
 
 const props = defineProps({
   product: {
@@ -16,7 +19,15 @@ defineEmits(['toggle'])
 </script>
 
 <template>
-  <article class="product-card" :class="{ selected }">
+  <motion.article
+    class="product-card"
+    :class="{ selected }"
+    :initial="prefersReducedMotion ? false : { opacity: 0, y: 18 }"
+    :whileInView="{ opacity: 1, y: 0 }"
+    :whileHover="prefersReducedMotion ? undefined : { y: -4 }"
+    :viewport="{ once: true, amount: 0.15 }"
+    :transition="{ duration: 0.38, ease: 'easeOut' }"
+  >
     <div class="product-image-wrap">
       <img
         class="product-image"
@@ -46,5 +57,5 @@ defineEmits(['toggle'])
         {{ selected ? 'Na sua lista' : 'Adicionar à lista' }}
       </button>
     </div>
-  </article>
+  </motion.article>
 </template>
