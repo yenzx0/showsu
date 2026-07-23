@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
 :root {
   --color-background: #fff9ea;
   --color-surface: #fffdf5;
@@ -947,6 +950,7 @@ h3 {
   background: transparent;
   color: rgba(255, 255, 255, 0.48);
   font-size: inherit;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -1010,7 +1014,8 @@ h3 {
 }
 
 .admin-back,
-.admin-cancel {
+.admin-cancel,
+.admin-signout {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1020,6 +1025,112 @@ h3 {
   color: var(--color-secondary);
   font-weight: 800;
   cursor: pointer;
+}
+
+.admin-signout {
+  border: 1px solid rgba(128, 9, 9, 0.12);
+  border-radius: 9px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--color-secondary);
+  font-size: 0.78rem;
+}
+
+.admin-auth-shell {
+  display: grid;
+  width: min(calc(100% - 32px), 520px);
+  min-height: calc(100vh - 79px);
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  margin-inline: auto;
+  padding-block: 48px;
+}
+
+.admin-login-card,
+.admin-setup-card {
+  width: 100%;
+  padding: clamp(26px, 6vw, 48px);
+}
+
+.admin-login-card h1,
+.admin-setup-card h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+}
+
+.admin-login-card > p:not(.eyebrow, .admin-feedback),
+.admin-setup-card > p:not(.eyebrow) {
+  color: var(--color-muted);
+}
+
+.admin-login-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  background: var(--color-soft-yellow);
+  color: var(--color-secondary);
+}
+
+.admin-setup-card > svg {
+  margin-bottom: 20px;
+  color: var(--color-secondary);
+}
+
+.admin-login-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.admin-login-form label {
+  display: grid;
+  gap: 7px;
+  color: #4e4840;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.admin-login-form label > div,
+.admin-login-form input {
+  width: 100%;
+}
+
+.admin-login-form input {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px 13px;
+  outline: 0;
+  background: var(--color-white);
+  color: var(--color-text);
+}
+
+.admin-login-form input:focus {
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 0 0 3px rgba(233, 162, 9, 0.1);
+}
+
+.admin-login-form .button,
+.admin-setup-card .button {
+  justify-content: center;
+  border: 0;
+  margin-top: 4px;
+  background: var(--color-primary);
+  color: var(--color-secondary-dark);
+  cursor: pointer;
+}
+
+.admin-spinner {
+  animation: admin-spin 0.9s linear infinite;
+}
+
+@keyframes admin-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .admin-main {
@@ -1408,6 +1519,14 @@ h3 {
   color: #9a2d24;
 }
 
+.admin-overlay button:disabled,
+.admin-overlay input:disabled,
+.admin-overlay select:disabled,
+.admin-overlay textarea:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+}
+
 @media (max-width: 980px) {
   .desktop-nav,
   .header-order {
@@ -1647,10 +1766,10 @@ h3 {
   }
 
   .admin-header-inner {
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
     padding-block: 11px;
   }
 
